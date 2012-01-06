@@ -18,8 +18,8 @@ $(function () {
   
     // Initialize the jQuery File Upload widget:
     $('#fileupload').fileupload({
-      maxNumberOfFiles: 10,
-      acceptFileTypes: /\.(jpg|jpeg|gif|png|JPG|JPEG|GIF|PNG)$/
+      maxNumberOfFiles: 10//,
+      // acceptFileTypes: /\.(jpg|jpeg|gif|png|JPG|JPEG|GIF|PNG)$/
     });
     
     // 

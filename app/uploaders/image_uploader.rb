@@ -27,22 +27,22 @@ class ImageUploader < CarrierWave::Uploader::Base
   #   # do something
   # end
 
-  # Create different versions of your uploaded files:
-  process :resize_to_fit => [800, 600]
-
-  version :thumb do
-    process :resize_to_fit => [80, 80]
-  end
-  
-  version :medium do
-    process :resize_to_fit => [200, 200]
-  end
-
-  # Add a white list of extensions which are allowed to be uploaded.
-  # For images you might use something like this:
-  def extension_white_list
-    %w(jpg jpeg gif png)
-  end
+  # # Create different versions of your uploaded files:
+  # process :resize_to_fit => [800, 600]
+  # 
+  # version :thumb do
+  #   process :resize_to_fit => [80, 80]
+  # end
+  # 
+  # version :medium do
+  #   process :resize_to_fit => [200, 200]
+  # end
+  # 
+  # # Add a white list of extensions which are allowed to be uploaded.
+  # # For images you might use something like this:
+  # def extension_white_list
+  #   %w(jpg jpeg gif png)
+  # end
 
   # Override the filename of the uploaded files:
   # def filename

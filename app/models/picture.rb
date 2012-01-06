@@ -12,9 +12,20 @@ class Picture < ActiveRecord::Base
     "name" => read_attribute(:file),
     "size" => file.size,
     "url" => file.url,
-    "thumbnail_url" => file.thumb.url,
     "delete_url" => picture_path(:id => id),
     "delete_type" => "DELETE" 
    }
   end
 end
+
+# {
+#   "id" => read_attribute(:id),
+#   "title" => read_attribute(:title),
+#   "description" => read_attribute(:description),
+#   "name" => read_attribute(:file),
+#   "size" => file.size,
+#   "url" => file.url,
+#   "thumbnail_url" => file.thumb.url,
+#   "delete_url" => picture_path(:id => id),
+#   "delete_type" => "DELETE" 
+#  }
