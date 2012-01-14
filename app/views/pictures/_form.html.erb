@@ -18,7 +18,7 @@
       <div class="fileupload-buttonbar">
           <label class="fileinput-button">
               <span>Add files...</span>
-                <%= f.file_field :file %>
+                <%= f.file_field :file, :multiple => true %>
           </label>
           <button type="submit" class="start">Start upload</button>
           <button type="reset" class="cancel">Cancel upload</button>

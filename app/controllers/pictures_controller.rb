@@ -40,7 +40,10 @@ class PicturesController < ApplicationController
   # POST /pictures
   # POST /pictures.json
   def create
-    @picture = Picture.new(params[:picture])
+    p_attr = params[:picture]
+    p_attr[:file] = params[:picture][:file].first if params[:picture][:file].class == Array
+    
+    @picture = Picture.new(p_attr)
 
     respond_to do |format|
       if @picture.save
