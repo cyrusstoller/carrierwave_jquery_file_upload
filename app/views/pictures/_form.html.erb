@@ -4,7 +4,7 @@
 <% end %>
 
 <div id="fileupload">
-  <%= form_for @picture, :html => { :multipart => true } do |f| %>
+  <%= form_for @picture, :html => { :multipart => true }, :url => "/pictures?q=b" do |f| %>
       <div class="field">
         <%= f.label :title %><br />
         <%= f.text_field :title %>

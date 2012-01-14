@@ -2,7 +2,11 @@ class PicturesController < ApplicationController
   # GET /pictures
   # GET /pictures.json
   def index
-    @pictures = Picture.all
+    if params[:q].present?
+      @pictures = Picture.where("description = :q", :q => params[:q])
+    else
+      @pictures = Picture.all
+    end
 
     respond_to do |format|
       format.html # index.html.erb
